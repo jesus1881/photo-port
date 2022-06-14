@@ -35,6 +35,16 @@ describe("Nav component", () => {
     // assert value comparison
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('renders', () => {
+    render(<Nav
+      categories={categories}
+      setCurrentCategory={mockSetCurrentCategory}
+      currentCategory={mockCurrentCategory}
+      contactSelected={mockContactSelected}
+      setContactSelected={mockSetContactSelected}
+    />);
+  })
 });
 
 describe("emoji is visible", () => {
